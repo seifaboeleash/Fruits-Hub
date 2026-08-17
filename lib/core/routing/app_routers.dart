@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/constants/strings.dart';
-import 'package:fruits_hub/features/Auth/ui/screens/login_screen.dart';
-import 'package:fruits_hub/features/on_boarding/ui/screens/on_boarding_screen.dart';
-import 'package:fruits_hub/features/splash/ui/screens/splash_screen.dart';
+import 'package:fruits_hub/features/Auth/presentation/screens/login_screen.dart';
+import 'package:fruits_hub/features/on_boarding/presentation/screens/on_boarding_screen.dart';
+import 'package:fruits_hub/features/presentation/ui/screens/splash_screen.dart';
 
 class AppRouter {
   Route? generateRoutes(RouteSettings settings) {

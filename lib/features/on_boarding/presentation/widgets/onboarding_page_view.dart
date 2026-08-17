@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/constants/app_colors.dart';
 import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/core/constants/app_text_styles.dart';
-import 'package:fruits_hub/features/on_boarding/ui/widgets/onboarding_page_item.dart';
+import 'package:fruits_hub/features/on_boarding/presentation/widgets/onboarding_page_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
   final PageController pageController;

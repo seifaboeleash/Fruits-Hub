@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_hub/core/constants/app_text_styles.dart';
-import 'package:fruits_hub/features/on_boarding/ui/widgets/skip_button.dart';
+import 'package:fruits_hub/features/on_boarding/presentation/widgets/skip_button.dart';
 
 class OnBoardingPageItem extends StatelessWidget {
   final String imagePath;

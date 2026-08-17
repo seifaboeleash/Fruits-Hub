@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/shared/custom_button.dart';
-import 'package:fruits_hub/features/on_boarding/ui/widgets/onboarding_page_view.dart';
-import 'package:fruits_hub/features/on_boarding/ui/widgets/page_indicator.dart';
+import 'package:fruits_hub/features/on_boarding/presentation/widgets/onboarding_page_view.dart';
+import 'package:fruits_hub/features/on_boarding/presentation/widgets/page_indicator.dart';
 import 'package:fruits_hub/core/constants/strings.dart';
 
 class OnBoardingScreen extends StatefulWidget {
