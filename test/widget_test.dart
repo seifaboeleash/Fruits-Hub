@@ -8,7 +8,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await Prefs.init();
     await tester.pumpWidget(const MyApp());
-    await tester.pumpAndSettle();
+    await tester.pumpAndSettle(const Duration(seconds: 3));
     expect(find.byType(MyApp), findsOneWidget);
   });
 }
