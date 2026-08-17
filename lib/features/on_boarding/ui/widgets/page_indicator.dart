@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_hub/core/constants/app_colors.dart';
 
 class OnBoardingPageIndicator extends StatelessWidget {
@@ -19,9 +20,9 @@ class OnBoardingPageIndicator extends StatelessWidget {
         dotCount,
         (index) => AnimatedContainer(
           duration: const Duration(milliseconds: 300),
-          margin: const EdgeInsets.symmetric(horizontal: 4.0),
-          width: 11,
-          height: 11,
+          margin: EdgeInsets.symmetric(horizontal: 4.w),
+          width: 11.r,
+          height: 11.r,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: currentPageIndex == index

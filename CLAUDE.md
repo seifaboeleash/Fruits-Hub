@@ -103,3 +103,30 @@ Rules below only cover things that OVERRIDE defaults or encode project decisions
 - Dispose controllers and focus nodes in `StatefulWidget.dispose()`
 - Prefer small, composed widgets to minimize rebuild scope
 - Use `BlocBuilder`/`BlocSelector` on the smallest widget that needs the state — never at the top of the tree
+
+
+## 8) Responsive Design Rule (flutter_screenutil)
+
+This project uses `flutter_screenutil` for responsive/adaptive UI across all 
+screen sizes. Design reference size: [DESIGN_WIDTH] x [DESIGN_HEIGHT] (from Figma).
+
+**Every new widget or screen MUST follow these conversion rules — never use 
+raw pixel values:**
+
+| Use case | Extension | Example |
+|---|---|---|
+| Width, horizontal padding/margin | `.w` | `EdgeInsets.symmetric(horizontal: 16.w)` |
+| Height, vertical padding/margin | `.h` | `SizedBox(height: 24.h)` |
+| Font size | `.sp` | `fontSize: 14.sp` |
+| Border radius / circular shapes | `.r` | `BorderRadius.circular(16.r)` |
+
+**Exceptions (do NOT convert):**
+- Ratios/percentages based on `MediaQuery` (e.g. `height * 0.5`)
+- Values inside `Duration` (animation timing is not a screen dimension)
+
+**Setup location:** `main.dart` wraps the app root in `ScreenUtilInit` with 
+`designSize: Size([DESIGN_WIDTH], [DESIGN_HEIGHT])`.
+
+Before finishing any UI task, verify no hardcoded pixel values were introduced 
+by searching for raw numeric literals in `SizedBox`, `EdgeInsets`, `fontSize`, 
+and `BorderRadius.circular`.

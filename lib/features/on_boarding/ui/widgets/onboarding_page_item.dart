@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_hub/core/constants/app_text_styles.dart';
 import 'package:fruits_hub/features/on_boarding/ui/widgets/skip_button.dart';
@@ -44,23 +45,23 @@ class OnBoardingPageItem extends StatelessWidget {
               ),
               Visibility(
                 visible: isVisibleSkip,
-                child: const Positioned(
-                  top: 16,
-                  right: 16,
-                  child: SkipButton(),
+                child: Positioned(
+                  top: 16.h,
+                  right: 16.w,
+                  child: const SkipButton(),
                 ),
               ),
             ],
           ),
         ),
-        const SizedBox(height: 24),
+        SizedBox(height: 24.h),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: titleWidget,
         ),
-        const SizedBox(height: 24),
+        SizedBox(height: 24.h),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 36.0),
+          padding: EdgeInsets.symmetric(horizontal: 36.w),
           child: Text(
             subtitle,
             textAlign: TextAlign.center,

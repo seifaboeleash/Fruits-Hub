@@ -6,19 +6,17 @@ import 'package:fruits_hub/features/on_boarding/ui/widgets/onboarding_page_item.
 
 class OnBoardingPageView extends StatelessWidget {
   final PageController pageController;
-  final ValueChanged<int> onPageChanged;
 
   const OnBoardingPageView({
     super.key,
     required this.pageController,
-    required this.onPageChanged,
   });
 
   @override
   Widget build(BuildContext context) {
     return PageView(
       controller: pageController,
-      onPageChanged: onPageChanged,
+      
       children: [
         OnBoardingPageItem(
           imagePath: AppImages.pageViewItem1Image,

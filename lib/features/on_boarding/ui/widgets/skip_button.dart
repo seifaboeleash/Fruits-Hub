@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_hub/core/constants/app_text_styles.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/constants/strings.dart';
@@ -18,7 +19,7 @@ class SkipButton extends StatelessWidget {
             Navigator.pushReplacementNamed(context, loginScreen);
           },
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
         child: Text(
           'تخطٍ',
           style: AppTextStyles.regular13Skip,
