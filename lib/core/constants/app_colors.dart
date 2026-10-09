@@ -10,4 +10,5 @@ abstract class AppColors {
   static const Color activeDotColor = Color(0xFF1B5E37);
   static const Color page1HeaderBg = Color(0xFFFFF9EC);
   static const Color page2HeaderBg = Color(0xFFE2F3E7);
+  static const Color forgetPassTextColor = Color(0xFF2D9F5D);
 }

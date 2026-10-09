@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruits_hub/core/constants/app_colors.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:fruits_hub/core/constants/strings.dart';
 import 'package:fruits_hub/core/routing/app_routers.dart';
@@ -11,7 +12,9 @@ void main() async {
   await Prefs.init();
   runApp(const MyApp());
 }
+
 AppRouter appRouter = AppRouter();
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -23,14 +26,16 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
         theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
           fontFamily: 'Cairo',
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRoutes,
-        initialRoute: splashScreen,
-        
-         localizationsDelegates: const [
+        //initialRoute: splashScreen,
+        initialRoute: loginScreen,
+
+        localizationsDelegates: const [
           S.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,

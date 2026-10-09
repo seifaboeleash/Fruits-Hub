@@ -30,4 +30,16 @@ abstract class AppTextStyles {
     color: Colors.white,
     fontFamily: 'Cairo',
   );
+  static const TextStyle semiBold16Green = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.forgetPassTextColor,
+    fontFamily: 'Cairo',
+  );
+  static const TextStyle semiBold16Black = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.titleTextColor,
+    fontFamily: 'Cairo',
+  );
 }
